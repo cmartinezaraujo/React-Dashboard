@@ -2,6 +2,7 @@ import React from 'react'
 import "./sidebar.css"
 import { LineStyle, Timeline, TrendingUp, PersonOutline, StorefrontOutlined, AttachMoneyOutlined, BarChartOutlined,
 MailOutlined, DynamicFeedOutlined, ChatBubbleOutline, WorkOutline, ReportOutlined} from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 export default function Sidebar() {
   return (
@@ -10,10 +11,12 @@ export default function Sidebar() {
             <div className="sidebarMenu">
                 <h3 className="sidebarTitle">Dashboard</h3>
                 <ul className="sidebarList">
-                    <li className="sidebarListItem active">
-                        <LineStyle className="sidebarIcon"/>
-                        Home
-                    </li>
+                    <Link to="/" className='link'>
+                        <li className="sidebarListItem active">
+                            <LineStyle className="sidebarIcon"/>
+                            Home
+                        </li>
+                    </Link>
 
                     <li className="sidebarListItem">
                         <Timeline className="sidebarIcon"/>
@@ -30,15 +33,19 @@ export default function Sidebar() {
             <div className="sidebarMenu">
                 <h3 className="sidebarTitle">Quick Menu</h3>
                 <ul className="sidebarList">
-                    <li className="sidebarListItem active">
+                    <Link to="/users" className='link'>
+                    <li className="sidebarListItem">
                         <PersonOutline className="sidebarIcon"/>
                         Users
                     </li>
+                    </Link>
 
+                    <Link to="/products" className='link'>
                     <li className="sidebarListItem">
                         <StorefrontOutlined className="sidebarIcon"/>
                         Products
                     </li>
+                    </Link>
 
                     <li className="sidebarListItem">
                         <AttachMoneyOutlined className="sidebarIcon"/>
@@ -55,7 +62,7 @@ export default function Sidebar() {
             <div className="sidebarMenu">
                 <h3 className="sidebarTitle">Notifications</h3>
                 <ul className="sidebarList">
-                    <li className="sidebarListItem active">
+                    <li className="sidebarListItem">
                         <MailOutlined className="sidebarIcon"/>
                         Mail
                     </li>
@@ -75,7 +82,7 @@ export default function Sidebar() {
             <div className="sidebarMenu">
                 <h3 className="sidebarTitle">Staff</h3>
                 <ul className="sidebarList">
-                    <li className="sidebarListItem active">
+                    <li className="sidebarListItem">
                         <WorkOutline className="sidebarIcon"/>
                         Manage
                     </li>

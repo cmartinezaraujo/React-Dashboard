@@ -8,6 +8,11 @@
   margin-top: 10px;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
